@@ -21,7 +21,10 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/"
+        "dest": "internship/wsgi.py"
       }
     ]
+      "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
   }
