@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-$91!a#8x-e$9=ubexh(6#%_w6h%2mhl1brs3ndcfyks^m&0fq2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['*']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Application definition
@@ -161,7 +161,6 @@ PLOTLY_COMPONENT = [
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'internship/static')
 ]
@@ -170,4 +169,6 @@ LOGIN_REDIRECT_URL = '/chat/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+MEDIA_URLS ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
