@@ -83,7 +83,7 @@ WSGI_APPLICATION = "internship.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES["default"] = dj_database_url.parse("postgres://ghita:orW0Z9YQnrUWzGDDrzUnPx9X37OZTtZI@dpg-ck3hvquru70s73e0qt80-a.oregon-postgres.render.com/railway_gle9")
+DATABASES["default"] = dj_database_url.parse(DATABASE_URL)
 
 
 
