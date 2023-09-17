@@ -92,7 +92,7 @@ else:
         'USER': 'ghita',
         'PASSWORD': 'orW0Z9YQnrUWzGDDrzUnPx9X37OZTtZI',
         'HOST': 'dpg-ck3hvquru70s73e0qt80-a',
-        'PORT': '5432',
+        'PORT': '7319',
     }
 }
 
