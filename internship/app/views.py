@@ -7,8 +7,6 @@ import tiktoken
 from django.shortcuts import render, redirect
 import os
 import json
-import tkinter as tk
-from tkinter import filedialog
 from django.contrib.auth.decorators import login_required
 
 ENCODING = tiktoken.encoding_for_model("gpt-3.5-turbo")
