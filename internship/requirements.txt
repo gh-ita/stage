@@ -24,6 +24,7 @@ dash-table==5.0.0
 Django==4.1
 django-plotly-dash==2.2.1
 django-redis==5.3.0
+dj-database-url==2.1.0
 dpd-components==0.1.0
 et-xmlfile==1.1.0
 Flask==2.3.2
