@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 
-DATABASE_URL = 'postgres://ghita:orW0Z9YQnrUWzGDDrzUnPx9X37OZTtZI@dpg-ck3hvquru70s73e0qt80-a/railway_gle9'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,14 +83,7 @@ WSGI_APPLICATION = "internship.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-if not DEBUG:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
-        }}
+DATABASES["default"] = dj_database_url.parse("postgres://ghita:orW0Z9YQnrUWzGDDrzUnPx9X37OZTtZI@dpg-ck3hvquru70s73e0qt80-a/railway_gle9")
 
 
 
