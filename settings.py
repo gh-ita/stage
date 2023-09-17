@@ -83,7 +83,11 @@ WSGI_APPLICATION = "internship.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES["default"] = dj_database_url.parse('postgres://ghita:vh8DkA321icOocBvSJC9gV4Fs1aT3GNK@dpg-ck3jha7qj8ts73f4ka3g-a/table_i2at')
+DATABASES["default"] = dj_database_url.parse('DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
+}')
 
 
 
