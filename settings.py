@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+DATABASE_URL = 'postgres://ghita:orW0Z9YQnrUWzGDDrzUnPx9X37OZTtZI@dpg-ck3hvquru70s73e0qt80-a/railway_gle9'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -86,15 +87,10 @@ if not DEBUG:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'ghita',
-        'PASSWORD': 'orW0Z9YQnrUWzGDDrzUnPx9X37OZTtZI',
-        'HOST': 'dpg-ck3hvquru70s73e0qt80-a',
-        'PORT': '7319',
-    }
-}
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3',
+        }}
 
 
 
